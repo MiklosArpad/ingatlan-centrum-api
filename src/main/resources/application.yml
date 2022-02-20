@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+  jpa:
+    properties:
+      format_sql: true
+    generate-ddl: true
+    ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
