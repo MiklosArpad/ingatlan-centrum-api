@@ -2,6 +2,8 @@
 
 IngatlanCentrum real-estate management system's api.
 
+[![Build](https://github.com/MiklosArpad/ingatlan-centrum-api/actions/workflows/build.yml/badge.svg)](https://github.com/MiklosArpad/ingatlan-centrum-api/actions/workflows/build.yml)
+
 ## Running project locally
 
 1. Before running the application, make sure run this command in command line or in Git Bash:
