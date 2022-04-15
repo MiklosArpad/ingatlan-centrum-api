@@ -8,5 +8,6 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Empty test
 	}
 }
