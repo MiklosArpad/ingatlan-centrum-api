@@ -1,21 +1,19 @@
 # ingatlan-centrum-api
 
-## Set up project locally
+IngatlanCentrum real-estate management system's api.
 
-### Restore third-party dependency
+## Running project locally
 
-In the root of the project run this command in terminal:
-
-```bash
-./mvnw clean install
-```
-
-### Run api
-
-In the root of the project run this command in terminal:
+1. Before running the application, make sure run this command in command line or in Git Bash:
 
 ```bash
-./mvnw spring-boot:run
+mvn clean install
 ```
 
-Open [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) to view it in the browser.
+2. In the root of the project directory execute this command in command line or in Git Bash:
+
+```bash
+mvn spring-boot:run
+```
+
+Open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
