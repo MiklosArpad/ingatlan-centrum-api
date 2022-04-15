@@ -1,6 +1,6 @@
 # ingatlan-centrum-api
 
-IngatlanCentrum application's backend.
+IngatlanCentrum real-estate management system's api.
 
 ## Running project locally
 
