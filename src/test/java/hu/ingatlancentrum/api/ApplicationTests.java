@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ApplicationTests {
 
-	@Test
-	void contextLoads() {
-		// Empty test
-	}
+    @Test
+    void contextLoads() {
+        // Empty test
+    }
 }
