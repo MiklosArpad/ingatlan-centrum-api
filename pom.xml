@@ -12,9 +12,10 @@
 
     <groupId>hu.ingatlancentrum</groupId>
     <artifactId>ingatlancentrum-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>ingatlancentrum-api</name>
     <description>IngatlanCentrum real-estate management system's api.</description>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <!-- Language version -->
