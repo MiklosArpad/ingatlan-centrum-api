@@ -6,15 +6,16 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.3</version>
+        <version>2.6.6</version>
         <relativePath/>
     </parent>
 
     <groupId>hu.ingatlancentrum</groupId>
     <artifactId>ingatlancentrum-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>ingatlancentrum-api</name>
     <description>IngatlanCentrum real-estate management system's api.</description>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <!-- Language version -->
@@ -25,6 +26,9 @@
 
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.2</jacoco.version>
+
+        <!-- JaCoCo properties -->
+        <jacoco.line-coverage>0.90</jacoco.line-coverage>
     </properties>
 
     <dependencies>
@@ -94,7 +98,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.9</minimum>
+                                            <minimum>${jacoco.line-coverage}</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
