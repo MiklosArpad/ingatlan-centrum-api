@@ -12,7 +12,7 @@ IngatlanCentrum real-estate management system's api.
 mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
-OR
+or
 
 2. Run the packaged application:
 
@@ -22,4 +22,4 @@ mvn clean package
 java -jar -Dspring.profiles.active=dev target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
 ```
 
-Open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
+3. For SwaggerUI open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
