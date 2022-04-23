@@ -2,9 +2,9 @@ spring:
   application:
     name: "ingatlan-centrum-api"
   datasource:
-    url: jdbc:mysql://[ test-url ]/[ test-databaseName ]
-    username: [ test-username ]
-    password: [ test-password ]
+    url: jdbc:mysql://{url}/{database}
+    username: {username}
+    password: {password}
     sql:
       init:
         mode: always
