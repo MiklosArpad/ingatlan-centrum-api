@@ -14,12 +14,12 @@ mvn spring-boot:run
 
 OR
 
-3. Package the application:
+2. Run the packaged application:
 
 ```bash
 mvn clean package
 
-java -jar target/ingatlancentrum-api-0.0.1-SNAPSHOT.jar
+java -jar target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
 ```
 
 Open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
