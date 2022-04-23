@@ -6,16 +6,33 @@ IngatlanCentrum real-estate management system's api.
 
 ## Running project locally
 
-1. Before running the application, make sure run this command in command line or in Git Bash:
+### Prerequisites
+
+To avoid any unexpected behaviour make sure you have installed the following tools:
+
+- [Maven 3.8.5](https://maven.apache.org/download.cgi)
+- [OpenJDK 11](https://adoptium.net/temurin/releases)
+
+1. Before start, make sure you run:
 
 ```bash
-mvn clean install
+mvn clean install -Dspring.profiles.active=dev
 ```
 
-2. In the root of the project directory execute this command in command line or in Git Bash:
+2. Run with Spring Boot Maven plugin:
 
 ```bash
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
-Open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
+or
+
+3. Run the packaged application:
+
+```bash
+mvn clean package
+
+java -jar -Dspring.profiles.active=dev target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
+```
+
+4. For SwaggerUI open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.

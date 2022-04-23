@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:mysql://{ url }:{ port }/{ database } # store these to env. variable
+    username: { username } # store these to env. variable
+    password: { password } # store these to env. variable
+    sql:
+      init:
+        mode: always
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: off
