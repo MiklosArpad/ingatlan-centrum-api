@@ -1,10 +1,11 @@
 spring:
-  application:
-    name: "ingatlan-centrum-api"
+  config:
+    activate:
+      on-profile: dev
   datasource:
-    url: jdbc:mysql://{url}/{database}
-    username: {username}
-    password: {password}
+    url: jdbc:mysql://{ url }:{ port }/{ database } # store these to env. variable
+    username: { username } # store these to env. variable
+    password: { password } # store these to env. variable
     sql:
       init:
         mode: always
@@ -17,3 +18,4 @@ spring:
     properties:
       hibernate:
         format_sql: true
+    open-in-view: off
