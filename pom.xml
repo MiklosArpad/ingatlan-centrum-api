@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>hu.ingatlancentrum</groupId>
-    <artifactId>ingatlancentrum-api</artifactId>
+    <artifactId>ingatlan-centrum-api</artifactId>
     <name>ingatlancentrum-api</name>
     <description>IngatlanCentrum real-estate management system's api.</description>
     <version>0.0.1-SNAPSHOT</version>
