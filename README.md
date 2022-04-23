@@ -9,7 +9,7 @@ IngatlanCentrum real-estate management system's api.
 1. Run with Spring Boot Maven plugin:
 
 ```bash
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 OR
@@ -19,7 +19,7 @@ OR
 ```bash
 mvn clean package
 
-java -jar target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=dev target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
 ```
 
 Open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
