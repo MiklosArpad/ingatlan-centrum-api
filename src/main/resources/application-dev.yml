@@ -2,10 +2,11 @@ spring:
   config:
     activate:
       on-profile: dev
+    import: database-secrets.yml
   datasource:
-    url: jdbc:mysql://{ url }:{ port }/{ database } # store these to env. variable
-    username: { username } # store these to env. variable
-    password: { password } # store these to env. variable
+    url: jdbc:mysql://${database.url}/ingatlan_centrum
+    username: ${database.username}
+    password: ${database.password}
     sql:
       init:
         mode: always
