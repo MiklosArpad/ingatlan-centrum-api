@@ -6,7 +6,7 @@ IngatlanCentrum real-estate management system's api.
 
 ## Running project locally
 
-### Requisites
+### Prerequisites
 
 To avoid any unexpected behaviour make sure you have installed the following tools:
 
