@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>hu.ingatlancentrum</groupId>
+    <groupId>hu.ingatlan-centrum</groupId>
     <artifactId>ingatlan-centrum-api</artifactId>
     <name>ingatlan-centrum-api</name>
     <description>IngatlanCentrum real-estate management system's api.</description>
