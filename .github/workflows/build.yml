@@ -19,4 +19,4 @@ jobs:
           distribution: "temurin"
           cache: maven
       - name: mvn clean install
-        run: mvn clean install
+        run: mvn clean install -Dspring.profiles.active=default
