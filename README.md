@@ -6,6 +6,13 @@ IngatlanCentrum real-estate management system's api.
 
 ## Running project locally
 
+### Requisites
+
+To avoid any unexpected behaviour make sure you have installed the following tools:
+
+- [Maven 3.8.5](https://maven.apache.org/download.cgi)
+- [OpenJDK 11](https://adoptium.net/temurin/releases)
+
 1. Run with Spring Boot Maven plugin:
 
 ```bash
