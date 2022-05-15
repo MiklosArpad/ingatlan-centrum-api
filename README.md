@@ -1,21 +1,40 @@
 # ingatlan-centrum-api
 
-## Set up project locally
+IngatlanCentrum real-estate management system's api.
 
-### Restore third-party dependency
+[![Build](https://github.com/MiklosArpad/ingatlan-centrum-api/actions/workflows/build.yml/badge.svg)](https://github.com/MiklosArpad/ingatlan-centrum-api/actions/workflows/build.yml)
 
-In the root of the project run this command in terminal:
+## Prerequisites
+
+To avoid any unexpected behaviour, make sure you have installed the following tools:
+
+- [Maven 3.8.5](https://maven.apache.org/download.cgi)
+- [OpenJDK 11](https://adoptium.net/temurin/releases)
+
+## Running project locally
+
+1. Before start, make sure to provide your local database's credentials in `database-secrets.yml`.
+
+2. To install third-party dependencies, to create database schema and populate it with test data locally, make sure you run:
 
 ```bash
-./mvnw clean install
+mvn clean install -Dspring.profiles.active=dev
 ```
 
-### Run api
-
-In the root of the project run this command in terminal:
+3. Run with Spring Boot Maven plugin:
 
 ```bash
-./mvnw spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
-Open [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) to view it in the browser.
+OR
+
+3. Run with packaging:
+
+```bash
+mvn clean package
+
+java -jar -Dspring.profiles.active=dev target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
+```
+
+4. For SwaggerUI open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
