@@ -34,7 +34,7 @@ OR
 ```bash
 mvn clean package
 
-java -jar -Dspring.profiles.active=dev target/ingatlan-centrum-api-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=dev target/<jar-name>.jar
 ```
 
 4. For SwaggerUI open [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) to view it in the browser.
