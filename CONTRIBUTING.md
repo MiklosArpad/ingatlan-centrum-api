@@ -13,5 +13,5 @@
 - If you are opening a pull request, please use the following branch naming convention:
 
 ```
-[github-username]/[in case of no ticket pr describe the task] or [ticket number]
+[github-username]/[describe the task] or [ticket number]
 ```
