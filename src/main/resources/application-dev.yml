@@ -4,7 +4,7 @@ spring:
       on-profile: dev
     import: database-secrets.yml
   datasource:
-    url: jdbc:mysql://${database.url}/ingatlan_centrum
+    url: jdbc:postgres://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
     username: ${database.username}
     password: ${database.password}
     sql:
