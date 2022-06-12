@@ -2,7 +2,7 @@ spring:
   config:
     activate:
       on-profile: dev
-    import: database-secrets.yml
+    import: database-dev-secrets.yml
   datasource:
     url: jdbc:postgres://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
     username: ${database.username}
