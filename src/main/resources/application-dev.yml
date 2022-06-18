@@ -5,8 +5,8 @@ spring:
     import: database-dev-secrets.yml
   datasource:
     url: jdbc:mysql://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
-    username: ${database.username}
-    password: ${database.password}
+    username: ${jpa-connection.username}
+    password: ${jpa-connection.password}
     sql:
       init:
         mode: always
