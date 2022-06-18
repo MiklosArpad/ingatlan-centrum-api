@@ -1,5 +1,6 @@
 package hu.ingatlancentrum.api.controller;
 
+import hu.ingatlancentrum.api.constants.RouteConstants;
 import hu.ingatlancentrum.api.model.Property;
 import hu.ingatlancentrum.api.service.PropertyService;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/properties/")
+@RequestMapping(RouteConstants.PROPERTIES)
 public class PropertyController {
     private final PropertyService propertyService;
 
