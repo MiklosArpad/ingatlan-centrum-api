@@ -4,6 +4,8 @@ IngatlanCentrum real-estate management system's api.
 
 [![Build](https://github.com/MiklosArpad/ingatlan-centrum-api/actions/workflows/build.yml/badge.svg)](https://github.com/MiklosArpad/ingatlan-centrum-api/actions/workflows/build.yml)
 
+[Contribution](CONTRIBUTING.md)
+
 ## Prerequisites
 
 To avoid any unexpected behaviour, make sure you have installed the following tools:
