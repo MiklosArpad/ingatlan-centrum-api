@@ -14,7 +14,7 @@ spring:
   jpa:
     generate-ddl: none
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     database-platform: org.hibernate.dialect.MySQL5Dialect
     properties:
       hibernate:
