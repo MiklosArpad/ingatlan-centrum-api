@@ -59,6 +59,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${org.springdoc.version}</version>
@@ -73,6 +78,7 @@
                 <version>${jacoco.version}</version>
                 <configuration>
                     <excludes>
+                        <exclude>hu/ingatlancentrum/api/constants/*</exclude>
                         <exclude>hu/ingatlancentrum/api/controller/*</exclude>
                         <exclude>hu/ingatlancentrum/api/model/*</exclude>
                         <exclude>hu/ingatlancentrum/api/Application*</exclude>

@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+box React
+participant ClientApp as "Client app"
+endbox
+
+box Spring Boot backend
+participant PropertyController
+participant PropertyService
+participant PropertyRepository
+endbox
+
+ClientApp -> PropertyController: HTTP GET "/api/properties"
+PropertyController -> PropertyService: getProperties()
+PropertyService -> PropertyRepository: findAll()
+PropertyRepository --> PropertyService: List<Property>
+PropertyService --> PropertyController: List<Property>
+PropertyController --> ClientApp: [{ id: 1, name: "Castle" }]
+
+@enduml
