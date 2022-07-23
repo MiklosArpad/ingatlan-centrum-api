@@ -2,7 +2,7 @@ spring:
   config:
     activate:
       on-profile: dev
-    import: database-dev-secrets.yml
+    import: database-secrets.yml
   datasource:
     url: jdbc:postgresql://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
     username: ${jpa-connection.username}
@@ -12,10 +12,10 @@ spring:
         mode: always
     driver-class-name: org.postgresql.Driver
   jpa:
-    generate-ddl: true
+    generate-ddl: none
     hibernate:
       ddl-auto: none
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     properties:
       hibernate:
         format_sql: true
