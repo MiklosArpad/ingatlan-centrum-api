@@ -28,4 +28,8 @@ public class PropertyService {
 
         return propertyOptional.get();
     }
+
+    public Property addProperty(Property property) {
+        return propertyRepository.save(property);
+    }
 }

@@ -11,8 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -37,7 +36,7 @@ public class PropertyServiceTests {
     }
 
     @Test
-    public void getProperty_HappyPath() {
+    public void getPropertyTest_HappyPath() {
         var property = new Property(); // TODO: create test builders
         property.setId(1L);
         property.setAddress("Szeged");
@@ -49,12 +48,27 @@ public class PropertyServiceTests {
     }
 
     @Test
-    public void getProperty_UnhappyPath() {
+    public void getPropertyTest_UnhappyPath() {
         when(propertyRepository.findById(any()))
                 .thenReturn(Optional.empty());
         assertThrows(
                 PropertyNotFoundException.class,
                 () -> propertyService.getProperty(1L)
         );
+    }
+
+    @Test
+    public void addPropertyTest() {
+        var property = new Property(); // TODO: create test builders
+        property.setId(1L);
+        property.setAddress("Szeged");
+        when(propertyRepository.save(any()))
+                .thenReturn(property);
+
+        var propertyToSave = new Property();
+        propertyToSave.setAddress("Szeged");
+        var result = propertyService.addProperty(propertyToSave);
+        assertEquals(property, result);
+        assertNotNull(result.getId());
     }
 }
