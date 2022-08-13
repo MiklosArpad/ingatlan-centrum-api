@@ -1,8 +1,8 @@
 package hu.ingatlancentrum.api.service;
 
 import hu.ingatlancentrum.api.exception.PropertyNotFoundException;
-import hu.ingatlancentrum.api.model.Property;
 import hu.ingatlancentrum.api.repository.PropertyRepository;
+import hu.ingatlancentrum.builder.model.PropertyTestBuilder;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -24,9 +24,7 @@ public class PropertyServiceTests {
 
     @Test
     public void getPropertiesTest() {
-        var property = new Property(); // TODO: create test builders
-        property.setId(1L);
-        property.setAddress("Szeged");
+        var property = PropertyTestBuilder.defaultProperty;
 
         when(propertyRepository.findAll())
                 .thenReturn(List.of(property));
@@ -37,9 +35,7 @@ public class PropertyServiceTests {
 
     @Test
     public void getPropertyTest_HappyPath() {
-        var property = new Property(); // TODO: create test builders
-        property.setId(1L);
-        property.setAddress("Szeged");
+        var property = PropertyTestBuilder.defaultProperty;
 
         when(propertyRepository.findById(any()))
                 .thenReturn(Optional.of(property));
@@ -59,14 +55,11 @@ public class PropertyServiceTests {
 
     @Test
     public void addPropertyTest() {
-        var property = new Property(); // TODO: create test builders
-        property.setId(1L);
-        property.setAddress("Szeged");
+        var property = PropertyTestBuilder.defaultProperty;
         when(propertyRepository.save(any()))
                 .thenReturn(property);
 
-        var propertyToSave = new Property();
-        propertyToSave.setAddress("Szeged");
+        var propertyToSave = PropertyTestBuilder.propertyWithoutId;
         var result = propertyService.addProperty(propertyToSave);
         assertEquals(property, result);
         assertNotNull(result.getId());
