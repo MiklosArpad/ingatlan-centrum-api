@@ -25,6 +25,7 @@
         <spring-boot.version>2.6.6</spring-boot.version>
         <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
         <org.springdoc.version>1.6.7</org.springdoc.version>
+        <lombok.version>1.18.24</lombok.version>
 
         <!-- Maven plugin versions -->
         <jacoco.version>0.8.2</jacoco.version>
@@ -59,9 +60,20 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${org.springdoc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -73,6 +85,7 @@
                 <version>${jacoco.version}</version>
                 <configuration>
                     <excludes>
+                        <exclude>hu/ingatlancentrum/api/constants/*</exclude>
                         <exclude>hu/ingatlancentrum/api/controller/*</exclude>
                         <exclude>hu/ingatlancentrum/api/model/*</exclude>
                         <exclude>hu/ingatlancentrum/api/Application*</exclude>
