@@ -30,7 +30,7 @@ public class PropertyController {
         return new ResponseEntity<>(properties, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = RouteConstants.ID)
     public ResponseEntity<Property> getProperty(@PathVariable Long id) {
         try {
             var property = propertyService.getProperty(id);
