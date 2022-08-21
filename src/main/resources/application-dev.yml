@@ -4,13 +4,13 @@ spring:
       on-profile: dev
     import: database-secrets.yml
   datasource:
-    url: jdbc:mysql://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
+    url: jdbc:postgresql://${jpa-connection.host}:${jpa-connection.port}/${jpa-connection.database}
     username: ${jpa-connection.username}
     password: ${jpa-connection.password}
     sql:
       init:
         mode: always
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
   jpa:
     generate-ddl: true
     hibernate:
