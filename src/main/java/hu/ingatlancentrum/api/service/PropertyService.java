@@ -3,17 +3,15 @@ package hu.ingatlancentrum.api.service;
 import hu.ingatlancentrum.api.exception.PropertyNotFoundException;
 import hu.ingatlancentrum.api.model.Property;
 import hu.ingatlancentrum.api.repository.PropertyRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class PropertyService {
     private final PropertyRepository propertyRepository;
-
-    public PropertyService(PropertyRepository propertyRepository) {
-        this.propertyRepository = propertyRepository;
-    }
 
     public List<Property> getProperties() {
         return propertyRepository.findAll();

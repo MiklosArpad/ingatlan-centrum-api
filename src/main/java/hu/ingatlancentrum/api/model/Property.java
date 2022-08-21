@@ -11,16 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(
-        name = TableSchemaConstants.PROPERTY_TABLE_NAME
-)
+@Table(name = TableSchemaConstants.PROPERTY_TABLE_NAME)
 @Getter
 @Setter
 public class Property {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String address;
 }
