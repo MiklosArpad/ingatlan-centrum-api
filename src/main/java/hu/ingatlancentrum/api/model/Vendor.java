@@ -4,25 +4,27 @@ import hu.ingatlancentrum.api.constants.TableSchemaConstants;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
-@Table(name = TableSchemaConstants.PROPERTY_TABLE_NAME)
+@Table(name = TableSchemaConstants.VENDOR_TABLE_NAME)
 @Getter
 @Setter
-public class Property {
+public class Vendor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String address;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "vendor_id", nullable = false) // TODO: move to constants file.
-    private Vendor vendor;
+    private String name;
+    private String vatNumber;
+    private String phoneNumber;
+    private String email;
+    @OneToMany(mappedBy = "vendor", fetch = FetchType.EAGER) // TODO: move to constants file.
+    private List<Property> properties;
 }
