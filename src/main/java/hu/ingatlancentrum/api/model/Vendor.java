@@ -1,8 +1,7 @@
 package hu.ingatlancentrum.api.model;
 
 import hu.ingatlancentrum.api.constants.TableSchemaConstants;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,8 +14,7 @@ import java.util.List;
 
 @Entity
 @Table(name = TableSchemaConstants.VENDOR_TABLE_NAME)
-@Getter
-@Setter
+@Data
 public class Vendor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

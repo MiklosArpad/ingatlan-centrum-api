@@ -1,8 +1,7 @@
 package hu.ingatlancentrum.api.model;
 
 import hu.ingatlancentrum.api.constants.TableSchemaConstants;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -15,8 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = TableSchemaConstants.PROPERTY_TABLE_NAME)
-@Getter
-@Setter
+@Data
 public class Property {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
