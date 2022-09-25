@@ -3,7 +3,9 @@ package hu.ingatlancentrum.api.controller;
 import hu.ingatlancentrum.api.constants.RouteConstants;
 import hu.ingatlancentrum.api.exception.VendorNotFoundException;
 import hu.ingatlancentrum.api.model.Vendor;
+import hu.ingatlancentrum.api.resource.mapper.request.CreateVendorRequestToVendorMapper;
 import hu.ingatlancentrum.api.resource.mapper.response.VendorToVendorResponseMapper;
+import hu.ingatlancentrum.api.resource.request.CreateVendorRequest;
 import hu.ingatlancentrum.api.resource.response.VendorResponse;
 import hu.ingatlancentrum.api.service.VendorService;
 import lombok.AllArgsConstructor;
@@ -25,6 +27,7 @@ import java.util.stream.Collectors;
 public class VendorController {
     private final VendorService vendorService;
     private final VendorToVendorResponseMapper vendorToVendorResponseMapper;
+    private final CreateVendorRequestToVendorMapper createVendorRequestToVendorMapper;
 
     @GetMapping
     public ResponseEntity<List<VendorResponse>> getVendors() {
@@ -50,8 +53,10 @@ public class VendorController {
     }
 
     @PostMapping
-    public ResponseEntity<Vendor> createVendor(@RequestBody Vendor vendor) {
+    public ResponseEntity<VendorResponse> createVendor(@RequestBody CreateVendorRequest createVendorRequest) {
+        var vendor = createVendorRequestToVendorMapper.map(createVendorRequest);
         var createdVendor = vendorService.addVendor(vendor);
-        return new ResponseEntity<>(createdVendor, HttpStatus.CREATED);
+        var vendorResponse = vendorToVendorResponseMapper.map(createdVendor);
+        return new ResponseEntity<>(vendorResponse, HttpStatus.CREATED);
     }
 }
