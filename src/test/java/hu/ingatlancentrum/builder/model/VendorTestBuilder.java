@@ -15,6 +15,14 @@ public class VendorTestBuilder {
             "test@gmail.com"
     );
 
+    public static Vendor afterMapping = build(
+            null,
+            "John Doe",
+            "12345",
+            "123456789",
+            "test@gmail.com"
+    );
+
     private static Vendor build(
             Long id,
             String name,
