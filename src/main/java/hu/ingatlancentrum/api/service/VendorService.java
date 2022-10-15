@@ -1,6 +1,7 @@
 package hu.ingatlancentrum.api.service;
 
 import hu.ingatlancentrum.api.exception.PropertyNotFoundException;
+import hu.ingatlancentrum.api.exception.VendorNotFoundException;
 import hu.ingatlancentrum.api.model.Property;
 import hu.ingatlancentrum.api.model.Vendor;
 import hu.ingatlancentrum.api.repository.VendorRepository;
@@ -22,7 +23,7 @@ public class VendorService {
         var vendorOptional = vendorRepository.findById(id);
 
         if (vendorOptional.isEmpty()) {
-            throw new PropertyNotFoundException(id);
+            throw new VendorNotFoundException(id);
         }
 
         return vendorOptional.get();
