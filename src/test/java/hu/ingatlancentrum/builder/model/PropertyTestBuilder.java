@@ -2,6 +2,7 @@ package hu.ingatlancentrum.builder.model;
 
 import hu.ingatlancentrum.api.model.Property;
 
+// TODO: refactor Lombok @Builder
 public class PropertyTestBuilder {
     private PropertyTestBuilder() {
     }
