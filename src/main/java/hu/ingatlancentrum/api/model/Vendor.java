@@ -1,5 +1,6 @@
 package hu.ingatlancentrum.api.model;
 
+import hu.ingatlancentrum.api.constants.JpaMappingConstants;
 import hu.ingatlancentrum.api.constants.TableSchemaConstants;
 import lombok.Data;
 
@@ -23,6 +24,6 @@ public class Vendor {
     private String vatNumber;
     private String phoneNumber;
     private String email;
-    @OneToMany(mappedBy = "vendor", fetch = FetchType.EAGER) // TODO: move to constants file.
+    @OneToMany(mappedBy = JpaMappingConstants.VENDOR, fetch = FetchType.EAGER)
     private List<Property> properties;
 }

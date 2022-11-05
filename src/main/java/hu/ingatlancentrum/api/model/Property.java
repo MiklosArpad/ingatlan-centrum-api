@@ -1,5 +1,6 @@
 package hu.ingatlancentrum.api.model;
 
+import hu.ingatlancentrum.api.constants.JpaMappingConstants;
 import hu.ingatlancentrum.api.constants.TableSchemaConstants;
 import lombok.Data;
 
@@ -21,6 +22,6 @@ public class Property {
     private Long id;
     private String address;
     @ManyToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name = "vendor_id", nullable = false) // TODO: move to constants file.
+    @JoinColumn(name = JpaMappingConstants.VENDOR_ID, nullable = false)
     private Vendor vendor;
 }
